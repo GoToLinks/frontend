@@ -1,28 +1,38 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <AppBar></AppBar>
+    <NextLink></NextLink>
+    <TextOfMain></TextOfMain>
+    <AppFooter></AppFooter>
+
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+  import AppBar from "./components/AppBar.vue"
+  import AppFooter from "./components/AppFooter.vue"
+  import NextLink from "./components/NextLink.vue"
+  import TextOfMain from './components/TextOfMain.vue'
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  export default {
+    name: 'App',
+    components: {
+      AppBar,
+      AppFooter,
+      NextLink,
+      TextOfMain
+    },
   }
-}
 </script>
-
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  #app {
+    width: 100%;
+    height: 100%;
+    /* display: flex; */
+  }
 </style>
